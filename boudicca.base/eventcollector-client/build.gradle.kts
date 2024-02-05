@@ -9,8 +9,10 @@ repositories {
     mavenLocal()
 }
 
+val jvmVersion: Int by rootProject.ext
+
 kotlin {
-    jvmToolchain(rootProject.ext["jvmVersion"] as Int)
+    jvmToolchain(jvmVersion)
     compilerOptions {
         javaParameters = true
     }

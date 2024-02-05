@@ -8,8 +8,10 @@ plugins {
     `java-library`
 }
 
+val jvmVersion: Int by rootProject.ext
+
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(rootProject.ext["jvmVersion"] as Int))
+        languageVersion.set(JavaLanguageVersion.of(jvmVersion))
     }
 }
